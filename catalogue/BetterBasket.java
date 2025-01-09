@@ -28,7 +28,8 @@ public class BetterBasket extends Basket
 		  }
 	  }
 	 super.add(pr); //call add in Arraylist
-	 Collections.sort(this);
+	//Collections.sort(this);
+	 Collections.sort(this,new SortByNum());
 	 return (true);
   }
 }
