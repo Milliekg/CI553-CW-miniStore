@@ -37,4 +37,5 @@ class BetterBasketTest {
 		
 		assertEquals("0001", br.get(0).getProductNum(),"incorrect quality after merge");
 	}
+	
 }

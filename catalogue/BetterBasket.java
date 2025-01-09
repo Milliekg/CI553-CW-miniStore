@@ -13,7 +13,6 @@ public class BetterBasket extends Basket
 {
  // might not need- private static final long serialVersionUID = 1L;
   
-	
   // merge the items for same product,
   // or sort the item based on the product number
   @Override
