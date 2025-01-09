@@ -131,5 +131,4 @@ class Main
     window.setVisible(true);         // Make window visible
   }
   
-  
 }

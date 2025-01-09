@@ -10,5 +10,4 @@ public class SortByNum implements Comparator<Product> {
 		return p1.getProductNum().compareTo(p2.getProductNum());
 	}
 
-	
 }
