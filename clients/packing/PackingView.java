@@ -60,6 +60,8 @@ public class PackingView implements Observer
     cp.add( pageTitle );
 
     theBtPack.setBounds( 16, 25+60*0, 80, 40 );   // Check Button
+    theBtPack.setBackground(Color.pink);
+    theBtPack.setForeground(Color.black);
     theBtPack.addActionListener(                   // Call back code
       e -> cont.doPacked() );
     cp.add( theBtPack );                          //  Add to canvas

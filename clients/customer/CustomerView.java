@@ -20,6 +20,7 @@ public class CustomerView implements Observer
   class Name                              // Names of buttons
   {
     public static final String CHECK  = "Check";
+    public static final String SEARCH  = "Search";
     public static final String CLEAR  = "Clear";
   }
 
@@ -32,6 +33,7 @@ public class CustomerView implements Observer
   private final JTextArea   theOutput  = new JTextArea();
   private final JScrollPane theSP      = new JScrollPane();
   private final JButton     theBtCheck = new JButton( Name.CHECK );
+  private final JButton     theBtSearch = new JButton ( Name.SEARCH);
   private final JButton     theBtClear = new JButton( Name.CLEAR );
 
   private Picture thePicture = new Picture(80,80);
@@ -68,9 +70,18 @@ public class CustomerView implements Observer
     cp.add( pageTitle );
 
     theBtCheck.setBounds( 16, 25+60*0, 80, 40 );    // Check button
+    theBtCheck.setBackground(Color.pink);
+    theBtCheck.setForeground(Color.black);
     theBtCheck.addActionListener(                   // Call back code
       e -> cont.doCheck( theInput.getText() ) );
     cp.add( theBtCheck );                           //  Add to canvas
+    
+    theBtSearch.setBounds(16,25+60*1, 80,40);
+    theBtSearch.setBackground(Color.pink);
+    theBtSearch.setForeground(Color.black);
+    theBtSearch.addActionListener(
+    		e -> cont.doCheckByName( theInput.getText() ) );
+    cp.add(theBtSearch );
 
     theBtClear.setBounds( 16, 25+60*1, 80, 40 );    // Clear button
     theBtClear.addActionListener(                   // Call back code

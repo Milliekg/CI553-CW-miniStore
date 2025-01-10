@@ -63,17 +63,23 @@ public class BackDoorView implements Observer
     cp.add( pageTitle );
     
     theBtQuery.setBounds( 16, 25+60*0, 80, 40 );    // Buy button 
+    theBtQuery.setBackground(Color.pink);
+    theBtQuery.setForeground(Color.black);
     theBtQuery.addActionListener(                   // Call back code
       e -> cont.doQuery( theInput.getText() ) );
     cp.add( theBtQuery );                           //  Add to canvas
 
     theBtRStock.setBounds( 16, 25+60*1, 80, 40 );   // Check Button
+    theBtRStock.setBackground(Color.pink);
+    theBtRStock.setForeground(Color.black);
     theBtRStock.addActionListener(                  // Call back code
       e -> cont.doRStock( theInput.getText(),
                           theInputNo.getText() ) );
     cp.add( theBtRStock );                          //  Add to canvas
 
     theBtClear.setBounds( 16, 25+60*2, 80, 40 );    // Buy button 
+    theBtClear.setBackground(Color.pink);
+    theBtClear.setForeground(Color.black);
     theBtClear.addActionListener(                   // Call back code
       e -> cont.doClear() );
     cp.add( theBtClear );                           //  Add to canvas
